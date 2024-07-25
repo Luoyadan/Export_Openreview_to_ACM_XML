@@ -12,9 +12,7 @@ import pandas as pd
 import requests
 
 
-# Load the author emails and decisions Excel file
-# file_path = './author_emails_decisions.xlsx'
-# author_emails_decisions = pd.read_excel(file_path)
+
 
 # Authenticate with OpenReview
 client = openreview.api.OpenReviewClient(

@@ -21,6 +21,17 @@ To minimize issues when processing meta-information:
 
 Encourage all track chairs (e.g., demo tracks, workshop tracks) to use OpenReview and follow the same LaTeX template as the main track. This allows you to forward them the Python script to fetch and convert data. Manual editing of the XML file often leads to inconsistency issues.
 
+## Why Do We Need This XML File?
+The publication process can often be unclear, so here is a clarification of the general procedure for publications in ACM proceedings:
+
+1. The publication chair needs to forward the **XML files from all tracks** to the Sheridan Communications Team. They use an internal system to load all author information and create unique links for final submission. The critical **DOI string** will also be sent to finalize the version.
+2. The **rightsreview form** will be sent to the main contact (the first author is set as the main contact by default).
+3. The Sheridan Team will then monitor the process, checking formats and any issues to ensure all requirements are met.
+
+Keep in mind that the XML file needs to be sent as soon as possible to allow authors enough time for any necessary revisions if mistakes are made.
+
+
+
 ## How to Use the Python Code
 
 Ensure you have a PC role in the OpenReview system to fetch the data.
