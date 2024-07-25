@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<erights_record>
+	<parent_data>
+		<proceeding>2018-1234.1234</proceeding>
+		<volume/>
+		<issue/>
+		<issue_date/>
+		<source>Enter Conference Management System Name or self-generated</source> 
+	</parent_data>
+	<paper>
+		<paper_type>Full Paper</paper_type>
+	    <art_submission_date>01-DEC-2020</art_submission_date>
+		<art_approval_date>24-MAY-2021</art_approval_date>
+		<paper_title>Test Paper 1</paper_title>
+		<event_tracking_number>testpaper1</event_tracking_number>
+		<published_article_number/>
+		<start_page/>
+		<end_page/>
+		<authors>
+			<author>
+				<prefix/>
+				<first_name>Bob</first_name>
+				<middle_name/>
+				<last_name>Smith</last_name>
+				<suffix/>
+				<affiliations>
+					<affiliation>
+						<department>Computer Science Department</department>
+						<institution>Princeton University</institution>
+						<city>Princeton</city>
+						<state_province>New Jersey</state_province>
+						<country>USA</country>
+						<sequence_no>1</sequence_no>
+					</affiliation>
+					<affiliation>
+						<department/>
+						<institution>University of Cambridge</institution>
+						<city>Cambridge</city>
+						<state_province/>
+						<country>UK</country>
+						<sequence_no>2</sequence_no>
+					</affiliation>
+				</affiliations>
+				<email_address>bsmith@123.abc</email_address>
+				<sequence_no>1</sequence_no>
+				<contact_author>Y</contact_author>
+				<ACM_profile_id/>				
+				<ACM_client_no/>
+				<ORCID>####-####-####-####</ORCID>
+			</author>
+			<author>
+				<prefix/>
+				<first_name>Mary</first_name>
+				<middle_name/>
+				<last_name>Jones</last_name>
+				<suffix/>
+				<affiliations>
+					<affiliation>
+						<department>Department of Electrical Engineering</department>
+						<institution>Tufts University</institution>
+						<city>Medford</city>
+						<state_province>MA</state_province>
+						<country>USA</country>
+						<sequence_no>1</sequence_no>
+					</affiliation>
+					<affiliation>
+						<department/>
+						<institution>Tsinghua University</institution>
+						<city>Beijing</city>
+						<state_province/>
+						<country>China</country>
+						<sequence_no>2</sequence_no>
+					</affiliation>
+				</affiliations>
+				<email_address>mjones@abc.123</email_address>
+				<sequence_no>2</sequence_no>
+				<contact_author>N</contact_author>
+				<ACM_profile_id/>				
+				<ACM_client_no/>
+				<ORCID>####-####-####-####</ORCID>
+			</author>
+			<author>
+				<prefix/>
+				<first_name>Thomas</first_name>
+				<middle_name/>
+				<last_name>Lee</last_name>
+				<suffix/>
+				<affiliations>
+					<affiliation>
+						<department>School of Electrical Engineering and Computer Science</department>
+						<institution>University of Ottawa</institution>
+						<city>Ottawa</city>
+						<state_province>Ontario</state_province>
+						<country>Canada</country>
+						<sequence_no>1</sequence_no>
+					</affiliation>
+				</affiliations>
+				<email_address>tlee@abcd.1234</email_address>
+				<sequence_no>3</sequence_no>
+				<contact_author>N</contact_author>
+				<ACM_profile_id/>				
+				<ACM_client_no/>
+				<ORCID/>
+			</author>
+		</authors>
+		<section>Topic A</section>
+		<sequence_no>1</sequence_no>
+	</paper>
+	<paper>
+		<paper_type>Full Paper</paper_type>
+	    <art_submission_date>10-JAN-2021</art_submission_date>
+		<art_approval_date>21-AUG-2021</art_approval_date>
+		<paper_title>Test Paper 3</paper_title>
+		<event_tracking_number>testpaper3</event_tracking_number>
+		<published_article_number/>
+		<start_page/>
+		<end_page/>
+		<authors>
+			<author>
+				<prefix/>
+				<first_name>Craig</first_name>
+				<middle_name/>
+				<last_name>Rodkin</last_name>
+				<suffix/>
+				<affiliations>
+					<affiliation>
+						<department></department>
+						<institution>ACM</institution>
+						<city>New York</city>
+						<state_province>NY</state_province>
+						<country>USA</country>
+						<sequence_no>1</sequence_no>
+					</affiliation>
+				</affiliations>
+				<email_address>rodkin@acm.org</email_address>
+				<sequence_no>1</sequence_no>
+				<contact_author>Y</contact_author>
+				<ACM_profile_id/>				
+				<ACM_client_no/>
+				<ORCID/>
+			</author>
+			<author>
+				<prefix/>
+				<first_name>Anna</first_name>
+				<middle_name/>
+				<last_name>Lacson</last_name>
+				<suffix/>
+				<affiliations>
+					<affiliation>
+						<department></department>
+						<institution>ACM</institution>
+						<city>New York</city>
+						<state_province>NY</state_province>
+						<country>USA</country>
+						<sequence_no>2</sequence_no>
+					</affiliation>
+				</affiliations>
+				<email_address>lacson@acm.org</email_address>
+				<sequence_no>2</sequence_no>
+				<contact_author>N</contact_author>
+				<ACM_profile_id/>				
+				<ACM_client_no/>
+			</author>
+		</authors>
+		<section>Topic B</section>
+		<sequence_no>1</sequence_no>
+	</paper>
+	<paper>
+		<paper_type>Full Paper</paper_type>
+	    <art_submission_date>05-FEB-2022</art_submission_date>
+		<art_approval_date>15-MAR-2022</art_approval_date>
+		<paper_title>Test Paper 2</paper_title>
+		<event_tracking_number>testpaper2</event_tracking_number>
+		<published_article_number/>
+		<start_page/>
+		<end_page/>
+		<authors>
+			<author>
+				<prefix/>
+				<first_name>Susan</first_name>
+				<middle_name/>
+				<last_name>Ford</last_name>
+				<suffix/>
+				<affiliations>
+					<affiliation>
+						<department/>
+						<institution>IBM Research Labs Haifa</institution>
+						<city>Haifa</city>
+						<state_province/>
+						<country>Israel</country>
+						<sequence_no>1</sequence_no>
+					</affiliation>
+				</affiliations>
+				<email_address>sford@abcorp.com</email_address>
+				<sequence_no>1</sequence_no>
+				<contact_author>Y</contact_author>
+				<ACM_profile_id/>				
+				<ACM_client_no/>
+				<ORCID>####-####-####-####</ORCID>
+			</author>
+			<author>
+				<prefix/>
+				<first_name>Raj</first_name>
+				<middle_name/>
+				<last_name>Singh</last_name>
+				<suffix/>
+				<affiliations>
+					<affiliation>
+						<department></department>
+						<institution>Pixar</institution>
+						<city>Emeryville</city>
+						<state_province>CA</state_province>
+						<country>USA</country>
+						<sequence_no>1</sequence_no>
+					</affiliation>
+				</affiliations>
+				<email_address>rsingh@defcorp.com</email_address>
+				<sequence_no>2</sequence_no>
+				<contact_author>N</contact_author>
+				<ACM_profile_id/>				
+				<ACM_client_no/>
+				<ORCID/>
+			</author>
+		</authors>
+		<section>Topic B</section>
+		<sequence_no>2</sequence_no>
+	</paper>
+</erights_record>

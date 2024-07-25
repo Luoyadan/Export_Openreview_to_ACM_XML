@@ -32,9 +32,10 @@ Keep in mind that the XML file needs to be sent as soon as possible to allow aut
 
 
 
-## How to Use the Python Script 
+## Use the Script (ExportMeta_toXML.py) 
+This script fetches the information of all accepted papers and converts it into the **desired XML format** (see the sample file: `paperLoadSample.xml`).
 
-Ensure you have a **PC role** in the OpenReview system to fetch the data.
+Do ensure you have a **PC role** in the OpenReview system to fetch the data.
 
 ### Prerequisites
 
