@@ -32,9 +32,9 @@ Keep in mind that the XML file needs to be sent as soon as possible to allow aut
 
 
 
-## How to Use the Python Code
+## How to Use the Python Script 
 
-Ensure you have a PC role in the OpenReview system to fetch the data.
+Ensure you have a **PC role** in the OpenReview system to fetch the data.
 
 ### Prerequisites
 
@@ -49,7 +49,7 @@ pip install openreview-py
 
 ### Configuration
 
-Replace your username and password:
+Replace your `username` and `password`:
 ```python
 client = openreview.api.OpenReviewClient(
     baseurl='https://api2.openreview.net',
@@ -60,7 +60,7 @@ client = openreview.api.OpenReviewClient(
 
 ### Define the Conference ID
 
-Replace \`venue_id\` with your conference ID:
+Replace `venue_id` with your conference ID:
 ```python
 venue_id = 'acmmm.org/ACMMM/2024/Conference'  # e.g., 'acmmm.org/ACMMM/2024/Track/Demo'
 venue_group = client.get_group(venue_id)
