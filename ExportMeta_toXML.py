@@ -115,11 +115,13 @@ for note in tqdm(notes):
             last_name.text = parts[-1]
 
         affiliations = ET.SubElement(author, 'affiliations')
-        institution_info = profile.content.get(
-            'history', [{}])[0].get('institution', {}).get('name', 'N/A')
         affiliation = ET.SubElement(affiliations, 'affiliation')
         institution = ET.SubElement(affiliation, 'institution')
-
+        institution_info = profile.content.get(
+            'history', [{}])[0].get('institution', {}).get('name', 'N/A')
+        department = ET.SubElement(affiliation, 'department')
+        department.text = ''
+        
         sequence_no = ET.SubElement(author, 'sequence_no')
         sequence_no.text = str(i+1)
 
