@@ -71,5 +71,26 @@ track_name = 'main'  # Other options: BNI, GC, Demo
 
 After running the script, the papers should be correctly fetched and converted into the XML file.
 
+
+
+### Additional Functionalities (other_func.py)
+
+The other_func.py script provides additional features to assist publication chairs by managing and validating reviewer and chair profiles, as well as gathering submission statistics.
+
+Key Functions:
+
+**Profile Validation:**
+
+- Validates profiles for Senior Area Chairs (SAC), Area Chairs (AC), and Reviewers.
+
+- Checks for missing email addresses, incorrect name formats, and affiliation gaps.
+
+**Submission Statistics:**
+
+- Provides total counts of submissions and PDFs.
+
+- Generates statistics by country based on submission author email domains.
+
+
 ### Acknowledgement
 Thanks for the help of Xingjian Leng (xingjian.leng@anu.edu.au).

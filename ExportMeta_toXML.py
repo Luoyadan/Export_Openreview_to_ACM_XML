@@ -12,25 +12,27 @@ import pandas as pd
 import requests
 
 
-
-
 # Authenticate with OpenReview
 client = openreview.api.OpenReviewClient(
     baseurl='https://api2.openreview.net',
-    username="",  # YOUR OPENREVIEW USERNAME e.g., email
-    password=""  # YOUR OPENREVIEW PASSWD
+    username="lyadanluol@gmail.com",  # YOUR OPENREVIEW USERNAME e.g., email
+    password="langlang427739"  # YOUR OPENREVIEW PASSWD
 )
 
 
 # Define the conference ID and the accepted papers invitation ID
-venue_id = 'acmmm.org/ACMMM/2024/Conference'  # 'acmmm.org/ACMMM/2024/Track/Demo'
+# 'acmmm.org/ACMMM/2024/Track/Demo'
+venue_id = 'acmmm.org/ACMMM/2024/Conference'
 venue_group = client.get_group(venue_id)
 submission_name = venue_group.content['submission_name']['value']
-track_name = 'main'  # BNI, GC, Demo
+track_name = 'main_appeal'  # BNI, GC, Demo
 
-# notes = client.get_all_notes(
-#     invitation=f'{venue_id}/-/{submission_name}', details='replies')  # [:20] for debugging
-notes = client.get_all_notes(content={'venueid': venue_id})
+
+notes = client.get_all_notes(
+    invitation=f'{venue_id}/-/{submission_name}')
+
+
+# notes = client.get_all_notes(content={'venueid': venue_id})
 
 # Create a new XML tree structure with parent data
 new_root = ET.Element('erights_record')
@@ -48,6 +50,10 @@ issue_date = ET.SubElement(parent_data, 'issue_date')
 issue_date.text = ''
 source = ET.SubElement(parent_data, 'source')
 source.text = ''
+
+# filter the newly accepted papers
+newly_id = [2935, 1166]
+notes = [note for note in notes if note.number in newly_id]
 
 for note in tqdm(notes):
     paper = ET.SubElement(new_root, 'paper')
@@ -121,7 +127,7 @@ for note in tqdm(notes):
             'history', [{}])[0].get('institution', {}).get('name', 'N/A')
         department = ET.SubElement(affiliation, 'department')
         department.text = ''
-        
+
         sequence_no = ET.SubElement(author, 'sequence_no')
         sequence_no.text = str(i+1)
 
