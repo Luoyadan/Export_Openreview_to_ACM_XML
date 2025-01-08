@@ -1,6 +1,6 @@
-# 🎓 Guide to Publication Chair & TPC
+# 📘 Cookbook for Publication Chairs & TPC
 
-Welcome to the Guide to Publication Chair & Technical Program Committee (TPC) repository! This repository is designed to assist both publication chairs and TPC members involved in ACM conferences by providing essential tips, Python scripts, and integrations to streamline the publication and review processes.
+This repository is crafted to provide guidance and resources for publication and TPC chairs involved in ACM conferences (e.g., ACM Multimedia). It includes essential tips, Python scripts, and system integrations aimed at streamlining publication and review workflows, particularly with OpenReview. The repository is continuously updated, and suggestions for improvement are always welcome.
 
 ---
 
