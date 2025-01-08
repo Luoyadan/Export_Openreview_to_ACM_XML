@@ -1,96 +1,130 @@
+# 🎓 Guide to Publication Chair & TPC
 
-# Guide to Publication Chair
+Welcome to the Guide to Publication Chair & Technical Program Committee (TPC) repository! This repository is designed to assist both publication chairs and TPC members involved in ACM conferences by providing essential tips, Python scripts, and integrations to streamline the publication and review processes.
 
-Welcome to the Guide to Publication Chair repository. This repository is designed to assist publication chairs for any conference under the ACM umbrella. This repository provides useful tips and Python scripts to help prepare camera-ready information and fetch meta-information from the OpenReview system, converting it into the desired XML format.
+---
 
-## Tips Before the Final Submission Due Date
+## 📄 Section 1: Guide to Publication Chair
 
-To minimize issues when processing meta-information:
+### 🛠️ Tips Before Final Submission Due Date
 
-- **Preferred Email**: Inform authors to mark their preferred email in their profiles and ensure their emails are functional. This is crucial as these emails will be used to receive the final submission link and review form. Guidance can be found [here](https://docs.openreview.net/getting-started/creating-an-openreview-profile/add-or-remove-an-email-address-from-your-profile).
+🔹 **Preferred Email:** Instruct authors to mark their preferred email in their profiles and ensure it is functional. This email will be used to receive the final submission link and review form. [More Info](https://docs.openreview.net/getting-started/creating-an-openreview-profile/add-or-remove-an-email-address-from-your-profile).
 
-- **Name Verification**: Ensure authors double-check that their first and last names are set correctly and in English.
+🔹 **Name Verification:** Ensure authors verify that their first and last names are correctly set and in English.
 
-- **Author Profiles**: Verify that all author profiles are correctly created and activated. Incorrect activation can lead to "ghost authors," requiring manual correction.
+🔹 **Author Profiles:** Confirm all author profiles are correctly created and activated. Incomplete profiles can lead to "ghost authors," requiring manual corrections.
 
-- **ORCID Linking**: Encourage authors to link their ORCID profiles. While optional, early action is beneficial.
+🔹 **ORCID Linking:** Encourage authors to link their ORCID profiles. While optional, early action prevents delays.
 
-- **Author Guidelines**: Clearly state in the author guidelines, as per ACM policy, that no changes in author order or additions/deletions of authors are allowed after submission. It is advisable to declare this on the official website.
+🔹 **Author Guidelines:** As per ACM policy, no changes to author order or additions/deletions are allowed post-submission. Clearly state this in author guidelines and on the official website.
 
-### Communicating with Track Chairs
+### 📬 Communication with Track Chairs
 
-Encourage all track chairs (e.g., demo tracks, workshop tracks) to use OpenReview and follow the same LaTeX template as the main track. This allows you to forward them the Python script to fetch and convert data. Manual editing of the XML file often leads to inconsistency issues.
+Ensure track chairs (e.g., demo, workshop) use OpenReview and follow the same LaTeX template as the main track. This simplifies the process and prevents XML inconsistencies.
 
-## Why Do We Need This XML File?
-The publication process can often be unclear, so here is a clarification of the general procedure for publications in ACM proceedings:
+---
 
-1. The publication chair needs to forward the **XML files from all tracks** to the Sheridan Communications Team. They use an internal system to load all author information and create unique links for final submission. The critical **DOI string** will also be sent to finalize the version.
-2. The **rightsreview form** will be sent to the main contact (the first author is set as the main contact by default).
-3. The Sheridan Team will then monitor the process, checking formats and any issues to ensure all requirements are met.
+### 📂 Why XML Files are Needed
 
-Keep in mind that the XML file needs to be sent as soon as possible to allow authors enough time for any necessary revisions if mistakes are made.
+The publication chair must forward **XML files from all tracks** to the Sheridan Communications Team. This allows the team to load author information and generate unique submission links. 
 
+**Process Overview:**
+1. XML files are submitted to Sheridan Communications.
+2. Sheridan generates the DOI string and final submission links.
+3. The **rights review form** is sent to the first author (default main contact).
+4. Sheridan monitors the process to ensure formatting and other requirements are met.
 
+⏳ **Tip:** Send XML files early to give authors time for revisions if needed.
 
-## Use the Script (ExportMeta_toXML.py) 
-This script fetches the information of all accepted papers and converts it into the **desired XML format** (see the sample file: `paperLoadSample.xml`).
+---
 
-Do ensure you have a **PC role** in the OpenReview system to fetch the data.
+### 🧰 Scripts and Tools
 
-### Prerequisites
+#### 📜 ExportMeta_toXML.py
+Fetches accepted paper information and converts it into the required XML format (sample: `paperLoadSample.xml`). Ensure you have **PC role** permissions in OpenReview.
 
-Python 3.6 or newer is required to use openreview-py. Python 2.7 is no longer supported.
-
-### Installation
-
-To install the OpenReview Python library:
+**Prerequisites:**
+- Python 3.6 or newer
+- Install OpenReview Python library:
 ```bash
 pip install openreview-py
 ```
 
-### Configuration
-
-Replace your `username` and `password`:
+**Configuration:**
 ```python
 client = openreview.api.OpenReviewClient(
     baseurl='https://api2.openreview.net',
-    username="",  # YOUR OPENREVIEW USERNAME, e.g., email
-    password=""   # YOUR OPENREVIEW PASSWORD
+    username='',  # Your OpenReview email
+    password=''   # Your OpenReview password
 )
 ```
-
-### Define the Conference ID
-
 Replace `venue_id` with your conference ID:
 ```python
-venue_id = 'acmmm.org/ACMMM/2024/Conference'  # e.g., 'acmmm.org/ACMMM/2024/Track/Demo'
+venue_id = 'acmmm.org/ACMMM/2024/Conference'
 venue_group = client.get_group(venue_id)
 submission_name = venue_group.content['submission_name']['value']
-track_name = 'main'  # Other options: BNI, GC, Demo
+track_name = 'main'  # e.g., BNI, GC, Demo
 ```
 
-After running the script, the papers should be correctly fetched and converted into the XML file.
+---
 
+## 📊 Section 2: Guide to TPC (Technical Program Committee)
 
+Source code can be found in ```gs_utils``` folder.
+### 📈 OpenReview - Google Sheets Integration
 
-### Additional Functionalities (other_func.py)
+This section contains tools for integrating OpenReview with Google Sheets for the MM'24 conference. The integration allows for automated sheet creation and updates for submission data, assisting Area Chairs, SACs, and Program Chairs.
 
-The other_func.py script provides additional features to assist publication chairs by managing and validating reviewer and chair profiles, as well as gathering submission statistics.
+### ⚙️ Setup
 
-Key Functions:
+Install required packages:
+```bash
+conda env create -f environment.yml
+conda activate openreview
+```
 
-**Profile Validation:**
+#### 🔐 Configuration
 
-- Validates profiles for Senior Area Chairs (SAC), Area Chairs (AC), and Reviewers.
+1. Create a Google Sheets API project and follow [these instructions](https://docs.gspread.org/en/latest/oauth2.html#for-end-users-using-oauth-client-id) to get credentials.
+2. Create an `.env` file and add the following:
+```sh
+OPENREVIEW_VENUE_ID='acmmm.org/CONFERENCE/YEAR/Conference'
+OPENREVIEW_USERNAME='OPENREVIEW_EMAIL'
+OPENREVIEW_PASSWORD='OPENREVIEW_PASSWORD'
+GOOGLE_CREDENTIALS_PATH='./credentials/CREDENTIALS.json'
+GOOGLE_REFRESH_TOKEN_PATH='./credentials/REFRESH_TOKEN.refresh_token'
+GOOGLE_ACCOUNT='YOUR_EMAIL'
+```
+3. Generate a refresh token:
+```bash
+python generate_refresh_token.py
+```
 
-- Checks for missing email addresses, incorrect name formats, and affiliation gaps.
+4. Start data crawling and Google Sheets updates:
+```bash
+python gs_main.py
+```
 
-**Submission Statistics:**
+5. Broadcast the Google Sheets link to chairs:
+```bash
+python email_broadcast_main.py
+```
 
-- Provides total counts of submissions and PDFs.
+6. For comprehensive submission data and trends:
+```bash
+python comprehensive_data_main.py
+```
 
-- Generates statistics by country based on submission author email domains.
+---
 
+## ❓ FAQs
 
-### Acknowledgement
-Thanks for the help of Xingjian Leng (xingjian.leng@anu.edu.au).
+- **🔄 Google Sheets Update Failures:** Adjust `API_CREATE_LIMIT`, `API_UPDATE_LIMIT`, and `WAIT_TIME` in `src/constants.py` to avoid rate limits.
+- **🔑 Authentication Issues:** If Google Sheets authentication expires, rerun `generate_refresh_token.py`.
+
+---
+
+## 🙏 Contact and Acknowledgement
+We extend our gratitude to the MM'24 Organization Team. For any inquiries, feel free to reach out to:
+**Yadan Luo** (y.luo@uq.edu.au) 
+**Xingjian Leng** (xingjian.leng@anu.edu.au) 
