@@ -1,4 +1,9 @@
 # 📘 Cookbook for Publication Chairs & TPC
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Contributors](https://img.shields.io/github/contributors/Luoyadan/The-Cookbook-for-TPC-and-Publication-Chairs)
+![Last Commit](https://img.shields.io/github/last-commit/Luoyadan/The-Cookbook-for-TPC-and-Publication-Chairs)
+![OpenReview](https://img.shields.io/badge/OpenReview-integrated-orange)
 
 This repository is crafted to provide guidance and resources for publication and TPC chairs involved in ACM conferences (e.g., ACM Multimedia). It includes essential tips, Python scripts, and system integrations aimed at streamlining publication and review workflows, particularly with OpenReview. The repository is continuously updated, and suggestions for improvement are always welcome.
 
