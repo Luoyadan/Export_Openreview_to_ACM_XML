@@ -15,8 +15,8 @@ import requests
 # Authenticate with OpenReview
 client = openreview.api.OpenReviewClient(
     baseurl='https://api2.openreview.net',
-    username="lyadanluol@gmail.com",  # YOUR OPENREVIEW USERNAME e.g., email
-    password="langlang427739"  # YOUR OPENREVIEW PASSWD
+    username="",  # YOUR OPENREVIEW USERNAME e.g., email
+    password=""  # YOUR OPENREVIEW PASSWD
 )
 
 
